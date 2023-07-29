@@ -89,7 +89,7 @@ const prefixInput = document.getElementById("prefixInput");
 
             function toggleSidebar() {
               const sidebar = document.querySelector('.sidebar');
-              sidebar.classList.toggle('active');
+              sidebar.classList.toggle('show');
           
               const logsSwitch = document.querySelector('.check-box input[type="checkbox"]');
               const isLogsSwitchEnabled = logsSwitch.checked;

@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    -webkit-user-drag: none;
+}
+
+body {
+    background-color: #414141;
+}
+
+:root {
+    --gray: #262626;
+    --btn-color: #696969;
+    --pack-red-gradient: linear-gradient(180deg, #8A0000 0%, #A92828 100%);
+    --pack-gray: #313131;
+    --dark-red: #690000;
+    --footer-color: #565656;
+}
+
+.sidebar {
+    width: 450px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 100vh;
+    overflow: scroll;
+    background: var(--gray);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: all ease .2s;
+
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar-header {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all ease .2s;
+    -webkit-transition: all ease .2s;
+    -moz-transition: all ease .2s;
+    -ms-transition: all ease .2s;
+    -o-transition: all ease .2s;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.sidebar-header img {
+    width: 100%;
+   height: 100%;
+   object-fit: cover;
+   margin-bottom: 200px;
+}
+
+.sidebar-servers::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar-servers {
+    margin-left: 20px;
+    margin-top: 20px;
+    overflow: scroll;
+}
+
+.sidebar-servers .guild {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: all ease .2s;
+    -webkit-transition: all ease .2s;
+    -moz-transition: all ease .2s;
+    -ms-transition: all ease .2s;
+    -o-transition: all ease .2s;
+}
+
+.sidebar-servers .guild img {
+    width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.sidebar-servers .guild, .sidebar-header {
+    cursor: pointer;
+}
+
+.sidebar-header:hover, .sidebar-servers .guild:hover {
+    border-radius: 35%;
+    -webkit-border-radius: 35%;
+    -moz-border-radius: 35%;
+    -ms-border-radius: 35%;
+    -o-border-radius: 35%;
+}
+
+.user {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 60px;
+    margin-top: -70px;
+    margin-bottom: 10px;
+    transition: all ease .2s;
+    -webkit-transition: all ease .2s;
+    -moz-transition: all ease .2s;
+    -ms-transition: all ease .2s;
+    -o-transition: all ease .2s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.user img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.configuration h6 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: -110px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.configuration .settings {
+    margin-left: -20px;
+    margin-top: 50px;
+}
+
+.configuration .settings .drop-down .i i {
+    margin-left: 20px;
+    margin-top: 50px;
+    color: #a7a7a7;
+    cursor: pointer;
+    transition: all ease .2s;
+    -webkit-transition: all ease .2s;
+    -moz-transition: all ease .2s;
+    -ms-transition: all ease .2s;
+    -o-transition: all ease .2s;
+    font-size: 10px;
+}
+
+.configuration .settings .drop-down .i span {
+    font-weight: 500;
+    margin-left: 10px;
+    font-size: 15px;
+    color: #a7a7a7;
+}
+
+.configuration .settings .drop-down .i {
+    cursor: pointer;
+    width: 150px;
+}
+
+
+
+.configuration .settings .drop-down .options .option {
+    margin-left: 30px;
+    margin-top: 20px;
+    transition: all ease .2s;
+    max-width: 200px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transition: all ease .2s;
+    -moz-transition: all ease .2s;
+    -ms-transition: all ease .2s;
+    -o-transition: all ease .2s;
+    margin-bottom: -15px;
+}
+
+.configuration .settings .drop-down .options .option:hover {
+    background-color: #565656;
+}
+
+.configuration .settings .drop-down .options .option i {
+    margin-right: 10px;
+}
+
+.configuration .settings .drop-down .options a span {
+    color: #fff;
+}
+
+.configuration .settings .drop-down .option .option .links {
+    cursor: pointer;
+
+}
+
+.content {
+    margin-top: 20px;
+    left: 550px;
+    overflow: hidden;
+}
+
+.close-btn {
+    display: none;
+}
+
+.text {
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.card {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#stats {
+    background-color: #565656;
+    border-radius: 10px;
+}
+
+.content .heading {
+    margin-top: 50px;
+    margin-bottom: 50px;
+} 
+
+@media (max-width: 1000px) {
+    .sidebar {
+        display: none;
+        z-index: 9999; /* Move the sidebar to the front */
+    }
+
+    .sidebar.show {
+        display: block;
+    }
+
+    .toggle-btn {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 10; /* Ensure the toggle button is above the sidebar */
+        color: #fff;
+    }
+
+    .close-btn {
+        position: absolute;
+        display: block;
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 10000; /* Ensure the close button is above the sidebar */
+    }
+    .content {
+        position: relative;
+        left: 100px;
+        right: 100px;
+        top: 100px;
+    }
+}
+
+@media (max-width: 466px) {
+    .content {
+        position: relative;
+        left: 20px;
+        right: 20px;
+        top: 100px;
+    }
+    .sidebar {
+        width: 400px;
+    }
+    .configuration h6 {
+        margin-right: -35px;
+    }
+
+    .sidebar-header {
+        width: 50px;
+        height: 50px;
+    }
+
+    .sidebar-servers .guild {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 408px) {
+    .sidebar {
+        width: 300px;
+    }
+
+    .configuration h6 {
+        margin-right: -40px;
+    }
+
+    .sidebar-header {
+        width: 50px;
+        height: 50px;
+    }
+
+    .sidebar-servers .guild {
+        width: 50px;
+        height: 50px;
+    }
+    .user {
+        width: 60px;
+        height: 60px;
+        margin-left: 35px;
+    }
+    .configuration .settings .drop-down .i span {
+        font-size: 12px;
+    }
+    .drop-down {
+        font-size: 15px;
+    }
+    .configuration .settings .drop-down .options .option {
+        margin-left: 10px;
+    }
+}
+
+.drop-down.open .i i {
+    transform: rotate(90deg);
+    transition: transform 0.2s ease-in-out;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transition: transform 0.2s ease-in-out;
+    -moz-transition: transform 0.2s ease-in-out;
+    -ms-transition: transform 0.2s ease-in-out;
+    -o-transition: transform 0.2s ease-in-out;
+}
+
+.drop-down.open .options {
+    display: block; /* Show options when the dropdown is open */
+  }
+
+  /* 3awz t4of eh */

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.js" integrity="sha512-jxHTIcyuk3K/8tFI4UWP/2XfMAnBUL/GCcY0ah39DQfnsG8+YgtAJsOE8fznN+jWqwgLazJMEpmyE9HW1Mmc+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.css" integrity="sha512-lp6wLpq/o3UVdgb9txVgXUTsvs0Fj1YfelAbza2Kl/aQHbNnfTYPMLiQRvy3i+3IigMby34mtcvcrh31U50nRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/Status.css">
+    <script src="./all.js" defer></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="lang d-flex  align-items-center mb-3">
+            <div class="ms-auto">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATYAAACjCAMAAAA3vsLfAAAAt1BMVEX///+7Ez4AJmT++vzAMlG6DDu4ADPUfY/FSmK3ADDcl6XMX3bHS2W6ADgAIWIAJGNEVYEAAFgAH2EAG1+/EjsAGV4AFV0AAFMAD1sAElsAC1oRLGcAAFByfp0AAFkABVjZ3ufj5+0RMGvy9fh6hqORmrLDyda1vs5XZIqIkqxreJjp7fIvRnjHzttfbJCosMMeOXAAAEpLWoTT2OMnPnOdpbqst8o5Tn1PYYoAAEWCkq9Va5M5VYLPWEmfAAAPaUlEQVR4nO1da7ObuhVVSV/3tpUAXd52zPthzCPG2KdJ///vqoSELeG002HanoHR+pDkbK+TM6xsxNLW3gRon4jffrdVACXbGijZVuElGwrQ+4X9NPhz4n/4zWJwD7K54/uVo1tmvwXt7PYmx39M1ILR3ZNsKPiim28XXoUO+UjUR0NmdLSWROsYmWhB1JywetPS1L+80m3zsgX4dAajIcpB7ibrMADNwsJthQLs6qBwLE1IzUCznALo7oJoaWA4WPKdahkjOJ9wsA/ZYBZFCUii+g6fVwgvTR0CEEXhGb8uO42iGnyJ6qJ/qoH6oo6+gDqK0pfs+BxGEQBh3VyEv/JeTz8myuAuZNPsYwIIRktIDTMuaCy6ekK6uG1Ng532EoP8saOxunUFoneNaLCIhTsfWSONJUd7H9mmacaRiuFISzg6kGwDvbyQkXsUgHxBdHIS1F2JaPUkFh4WRCrw0dD2ItvpDgYQevJFaiAJQSov615GiLW2QE2CmSeF7BSECdDkv9ELCfF+2o1sQZ0aZfKAs2DThVdh73eDI8aQFWWGHgnLnUYXskg3sojf4VwoZ+j8fn6W8hh8JKWT1vyJgH7ZLMB8PbqHrP5jkg3F7OmHWxMiv2UXCdkzAPWlj3D8w2TEeAqaP2KM/HJmMO2D1kfQbCd9UcCI8KO3kKfzfx3r181izjZIrwSxy7Eznkzm8xeiYcHWOGS+iDhNGRFSUUyWUlbBM9Gc2TQduRueiJDntAG2C20BhJAbdifymxTEJbjARYw8CcizYRGEF1DiJfHUha5M3JlsqA/IhUc2uf9esaDX/BF8t7VeIiIXAJd8KMjRkwURjL7WCyaX3Ml2RESXiDuTzSwTFg8Fm6rdOTl7mRGo1yxW6y+ilXHi/fUEhZeQxZJysXnbkWwatieTmxmCasgoqUbR4yQQza+Tye2+imKcHtTk1qUhJBY0JpNb2NLTd2eyEc9PoqHsZzWHptHRl2LoQBIzkf2s5lPbnDky0QnpD4LaAruSzUpBMYCrdEORxSnpQCPLhlvQNKCVc8hvQJeQpVGMmVcwFCB9K5vsQzaeDXZeOdZ95DaVBc1yuDh6xMtnkP3mF6NhjIUvEtEt0p3LwFcxTrTHu+VUuS39mL3IZurswgOytySWlOcLW+/hIzA13F+YZ33wFKSbUHcmMguLLj3WzIB9AfWZSDZtrs4frv945vEuZPOHOZleOQGvxemVN9x4uTl/dopEPWcb+YnDU+9UXN+I6DY8b/XNy4Ywti+gdbG4UEGMnS5xMBaXORNbQVIZGAurF/luo0oCa0HETtKR7xafBBi7LbjY/Ls3L5t2PrdkyS/b48umosuxJb7j2J7L15Wb7bmtQEiIYpmSEENQkY9eusHy3B6JE2mPlxcxIETyyGjP5+nrr+DLVsGruy33rukr3RArPgIwiPVZPWLB7LVVQoib3EgwvvAysGAnlI5wymJ1y27b328WPNusgBYaw5tUMvOnHUPmireZaVExo6sr3qTuVMntLPEmhS4VMykl0+LdQhLMNe5FfvvDVjE/ElyaCHdDk3CgalzkLRH+ILFG9rOa05Dgh+zgzAvV9yATDbpNS+cy8PbLlF/D5BwmpmRT4QMUKd2Yi/CJcW3ARbL8ZPPfEJO8II4gLcBDIiIzCc9J+HUvshEDoXlG0Uo21e0qx70M/MZluYTipneNsWK3Ga+cWdVouH3DSpGcqHnDxXWqjvsSbpvbwvC02cBsXzYtpvuhE3s8Qp0//QKb2pCYicF3UYFFrtllMfR4MGJMxIFWIBFjaj1sFkMXphTqT3SnFu8l26STErfg+0dx2e9D6W5jCTWO3tt3a6FYV+MV37QQj7Xmz7cv2xOm7Xl1frBtcVGybOMI9JMt7sahbX8Lw29L4kkHR2NJPOS159lvvRL7kc1ss2oESZVlwmIeV1k1gJz8+rpy8yPLKgAI8UMIEkoOBvJr/FLtQYgJGKusXeq2H9m02eRW8HWrmSUzuaEgJUIjI47CGQF8hMz4CoVcBKvZ+O432zRktNTHX6QjdmzRkm/3VXITBj2fB7rk9eBU8i0sycK5F7oHaQ1pBdyZbNStEdnkVV4zqGyj3K2AtGlPKxNdmoOFsSBS2WQHN8V/+eNW8S6b2yVkty4fu6M4yR/NomhrE9YZyC1syI6aR57EEhETVpt0sug0/qfNQpCNLUcI3XvbLfkZ1dOmVi72Rp4wfC/hdQ/PfXTcgnCj/Bg97Faybbay0rX7O18DX6ve9gtHNHm+86IRtf54zjLm4FCAEckk5l2tNNaems4PDk4kDpkQeX8gIfJP8XNDgYLvz/TchWxWLa4+fJ905I0zYlOMHfJ9ABKIbWi/EZ3hKBA1no7109NtXjbkGocSVAdDPAiFhvH3HDiO1JpqG84NdN8M8UAQOca3DtwcQ1zmLMNxQP53Qzxv1U7GoQLlwXD3Ud2FWV6EoC7yQsyLPCfPz6bIj0IT6vemGEBCiK8mcHQjXyZgKJrvQhPqMS8a8kzN81cOI40QaxAWOWtC3bxsyGQmtxHPgPGDlXxTsXbpsUpueBMcvzkVH4HcF+ixSm79EB7JUGumYGfuI9vIfTY1ocpH7JA1ocpNkqcrieUHud52oLXh60kieqwJVa63HaYmVH6Hb182WlQk95lcaNRcQIKyg6NuLQGRJemLrIgEF0MIxK0lACzMmk/u8Gfhc/uyIbO+GxXopTZSfExKM8y55edBd8i949w8NFuxMjl6+eBKRCMPaRyLQdSDyrjX5l6yDepHAxkls6lzJtnfewsZGb9uXnDsKwe5+lHu3T3qLnIqLvp8ZpgZyOqfLo11q7Yl+TFHXt3dvmwapDqYLIeslJ+MTrciv25r5I9Ja2YT/vnMm0wh/0Ak0m9EvHhecjc8/YT5xHkHsj1BTL4/ZO4yCPWkh4ttO9ngLzbtlNgn+hvRzQYfLYPbP14WrjvAdp+ExmJWChsZOPs4EIkmdpLEwaZIDLB/Bpkh3sJ0dssIk97GyzlJ+OfN4q26+2OalYqiRthqBV0UJiAJo/Glh/kxMOIgVHfxyIndS2D4aBgx/LGo7qLtHy8/YeshvXfzm5AxCE8mN0nFs3iLtSsMF2Hvhdx0av3NxM4afKOuDoT625TknsqUVkyv0ZBtqkOrj6m8kJkGbUI15BQy6OZglFtYoUFr6vFbN+WuZMMtCOvFsTu1qcPy2B1eyZ0HrgtiQYgL2wwvoA6X3aq7kW32s3lh3cJ5hpuX4PS6NY5JILlhv8gRymct+UdBcjTaueeeE+0svFlFLrvhvcg2D1XxWSl+4fyc/nqxkXd9ICFGXJuHkMedGw+ix9VD9uUKRSLks1vSSNZeZDsV8atqzWvc6MJPAKba7LM1hPc60D3SkjhV0XklVyLONfe4eO34Ny8bQmS7+CHPSpGgO0ZvQ1UI1am9JNppjd6ITjS6SyL+IBvfObh52WLTT8H9qxkLhjYOTCcEPYbiOVRv2h8gN8xAfMVAYBo5+LBNcSQrhrgHoWMGsUCMza93kPpmvA/ZzHlWqhBO03nxEQChCWFuIwXNS0sUNzwotLCaLY+FwrtAzIIHM3MXsmn+NCuVtGKXJJomhkADpbOEPpyMr3yWMJncsJfOEuAkZiZZOKelxOjBR0D++Let4tmEep5sqibhG5VoMSuF6aF9vugtnaq7D9mYsdmtbzJxss1nbkXMv2wWz1cM5KBL6kXRlixOxfLNAW4H7lHSL4hJdAeLY3cvA0UIFkSrTjqQ82fp9gtH6DaUzi3klp8/6eyssJ10OM3ZM30Ew7MTN/MB6Hyc2sTOOYTCFA35hxhSxy64beZEeA1vTjmP2+xAtktvEbvFJ6wu7JFoXn2keY+YfTG3kV5sDWK+DbjdmBo6hpp9mVtY2XofPzwN+XxSsL/wKSxi6Sw+u7UD2aRZKW/kycQulW8eGnYCgMR3EVSV+OYA9rnZBC8iTz185N2q4uzWHmR7AmLsRsXPZqUe9nIk6zAMhyXRfvxsdquIXJm4M9ngdZqVasVZKS0+t2UBurY9i2NEJAhA2Z7FkaFz23agIMH4GaOzW+00u7UoluxKtnlW6i7sDSArPhJfJ7jhPmfEXHhYmi0npkK3asxfUDBc9ivbPCt19kXnYE9i5oH0fjd/2jGkEpHNbg0XWyKe32e39iabBmkTQuQi+QqpTa0WTagn+v2nRRMq7W8eF02oLt2C9EvV9iWbnYGsAKXchIqT6JyEsmz4CMYRyAfNmhsm5yjBkpa4BAX5S9+OEvYh2/wyo+Z6MlLeW8qDuC1sDw8PqY30VLSG0c7lM15OewzYs4sWi0SvS43TtcEicTey4R/8D/TIfZ6V0lr+ji2XrlHz+7PmA0/86lYN5nds0aXO5e/ParXX7NbTfvx4pucuZPOjm3ACwPOq5Y0z4iGC28yNMwKxbNw3opG3b0R4i57nM/Cvm8X8igHb/+msVAEcW5qVwrbbg9GxxE0/sixnBL0rvY3HtG0HFD+d3fJttvZt/XgZaSmdlQqrKns1HMBHVqXTrNRZKFMes6oDNSGKTahZVdWgqzLh8WCep9mttBJmt1BAiCGd3UpZ7m29TAkfzOTW4gN0ruQWgvFFPavkJkexCZW9RhU0gvFFMa/kpuLfWLK21uGxkxfIwhM1ZvliVupG/dZZqs8igxqzIZbchB1T1StpqAo5tPAZ3RazW1T18bSb6eXJphZy961m0OSQXxKlWVSNYUE8UdnOcreCSZt860Uj14nmYLWfVwy40aAXQG6lMkuQlcldlshvomsHdMnyQx1012jxwq3TPSkzIL/qDgWg0IdoN7JBfcTWaTEo62Xtye7v8oX3d2T5qfxWMStNfQvd5QK4ee/tUyuX1M02O1l43M0rBqahKu05+8+D06yUKf9/ABPRktMS0T0+wguiOc1uyVtWuiaiZ3/g5mV7CvXvvvyvE/ci2/8XaMOywU/EhncJ+ufhH5+9s1yP/32tQEFBQUFBQUFBQUFBQUHhX+Cze663CfDZHf7bBPjsgt82oWRbBSXbKijZVkHJtgpKtlVQsq2Ckm0VlGyrAD77oHabAJ/9bqptYruvUPtUfHYBRkFBQUFBQUFBQUFBYR/47P8xapsAn/3/k20Tqky5Ckq2VVCyrYKSbRWUbKugZFsFJdsqKNlWQcm2Cup4eRXA7xVWQB0vr8JnF2AUFBQUFBQUFBQUFBT2gV8VVgD8orACqky5Ckq2VVCyrYKSbRWUbKugZFsFJdsqKNlWQcm2Ckq2VVCyrcI/Afqzut2JlsNEAAAAAElFTkSuQmCC" alt="USA Flag" width="20" height="20">
+                        English
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Arabic</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar bg-dark text-light">
+            <!-- Close button -->
+            <div class="close-btn" onclick="closeSidebar()">
+                <i class="fas fa-times"></i>
+            </div>
+
+            <!-- Sidebar Header -->
+            <div class="sidebar-header bg-dark col-1">
+                <a href="./Overview.html"></a><img src="../../Imgs/designer.jpg" alt=""></a>
+            </div>
+            
+            <!-- Sidebar Servers Section -->
+            <div class="row">
+                <div class="sidebar-servers col-3">
+                    <!-- Server 1 -->
+                    <div class="guild">
+                        <a href="./Servers/Overview.html"><img src="../../berlin work/11itled-1.png" alt=""></a>
+                    </div>
+                    
+                    <!-- Server 2 -->
+                    <div class="guild">
+                        <a href="./Servers/Overview.html"><img src="../../berlin work/11itled-1.png" alt=""></a>
+                    </div>
+                    
+                    <!-- Server 3 -->
+                    <div class="guild">
+                        <a href="./Servers/Overview.html"><img src="../../berlin work/11itled-1.png" alt=""></a>
+                    </div>
+                    
+                    <!-- Server 4 -->
+                    <div class="guild">
+                        <a href="./Servers/Overview.html"><img src="../../berlin work/11itled-1.png" alt=""></a>
+                    </div>
+                    
+                    <!-- Server 5 -->
+                    <div class="guild">
+                        <a href="./Servers/Overview.html"><img src="../../berlin work/11itled-1.png" alt=""></a>
+                    </div>
+                </div>
+                
+                <div class="configuration col">
+                    <div class="user">
+                        <img src="../../Imgs/designer.jpg">
+                    </div>
+                    <h6>Username</h6>
+                    <div class="settings">
+                        <div class="drop-down">
+                            <div class="i"><i class="fa-solid fa-angle-right"></i><span>GENERAL</span></div>
+                            <div class="options">
+                                <div class="option link" id="Overview">
+                                    <a href="./Overview.html" class="links" style="text-decoration: none;" onclick="event.stopPropagation();"><i class="fa-solid fa-eye" style="color: #ffffff;"></i><span>Overview</span></a>
+                                </div>
+                                <div class="option link">
+                                    <a href="./Subscriptions.html" class="links" style="text-decoration: none;" onclick="event.stopPropagation();"><i class="fa-solid fa-gem" style="color: #ffffff;"></i><span>Subscriptions</span></a>
+                                </div>
+                                <div class="option link">
+                                    <a href="Status.html" class="links" style="text-decoration: none;" onclick="event.stopPropagation();"><i class="fa-solid fa-signal" style="color: #ffffff;"></i><span>Bot status</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="drop-down">
+                            <div class="i"><i class="fa-solid fa-angle-right"></i><span>STORE</span></div>
+                            <div class="options">
+                                <div class="option link">
+                                    <a href="../Landing page/index.html" class="links" style="text-decoration: none;" onclick="event.stopPropagation();"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i><span>Services</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="toggle-btn" onclick="toggleSidebar()" data-custom-target=".sidebar">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="content text-light position-absolute">
+           <div class="heading">
+            <h4>Welcome back,</h4>
+            <h1>.m_za!</h1>
+           </div>
+           <div class="content-body">
+            <div class="text">
+                <h2>Most recent subscriptions</h2>
+            </div>
+            <div class="row">
+                <div class="card col-lg col-md-6 col-sm  p-4 bg-dark text-light">
+                    <div class="card-header">
+                        <h2>10x Music bots</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3>Ends after :</h3>
+                    </div>
+                    <div class="card-footer">
+                        <p>14d 12h 36m 03s</p>
+                    </div>
+                </div>
+                <div class="card col-md-6 col-sm-5 p-4 bg-dark text-light">
+                    <div class="card-header">
+                        <h2>10x Music bots</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3>Ends after :</h3>
+                    </div>
+                    <div class="card-footer">
+                        <p>14d 12h 36m 03s</p>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+
+    <script>
+       function toggleSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('show');
+    }
+
+    function closeSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.remove('show');
+    }
+
+    const customToggleBtn = document.querySelector('.toggle-btn');
+    customToggleBtn.addEventListener('click', function () {
+        toggleSidebar();
+    });
+    </script>
+</body>
+</html>
